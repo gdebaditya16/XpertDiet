@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Reminder Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Forgot To Drink water - No problem</h1>
+        </header>
+
+        <div class="tip-container" id="tipContainer">
+            <span class="close-tip" onclick="closeTip()"></span>
+            <p id="healthTip"></p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-info">
+                <span>Daily Progress</span>
+                <span id="progressText">0/2000ml</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="amount-control">
+                <button onclick="adjustAmount(-50)" class="btn">-</button>
+                <span id="currentAmount">250</span>ml
+                <button onclick="adjustAmount(50)" class="btn">+</button>
+            </div>
+            <button onclick="addWater()" class="btn primary">Add Water</button>
+        </div>
+
+        <div class="logs" id="waterLogs">
+            <h2>Today's Log</h2>
+            <div class="log-entries" id="logEntries"></div>
+        </div>
+
+        <button onclick="resetLogs()" class="btn reset">Reset Today's Log</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

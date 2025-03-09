@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <link rel="stylesheet" href="calorie.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Calorie Calculator</h2>
+        <input type="number" id="weight" placeholder="Weight (kg)">
+        <input type="number" id="height" placeholder="Height (cm)">
+        <input type="number" id="age" placeholder="Age">
+        <select id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <select id="activity">
+            <option value="1.2">Sedentary (little or no exercise)</option>
+            <option value="1.375">Lightly active (light exercise 1-3 days/week)</option>
+            <option value="1.55">Moderately active (moderate exercise 3-5 days/week)</option>
+            <option value="1.725">Very active (hard exercise 6-7 days/week)</option>
+            <option value="1.9">Super active (very hard exercise or physical job)</option>
+        </select>
+        <button onclick="calculateCalories()">Calculate</button>
+        <h3 id="result"></h3>
+    </div>    
+    <script src="calorie.js"></script>
+</body>
+</html>
+
+
